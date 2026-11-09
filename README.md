@@ -40,3 +40,9 @@ NPCI's site blocks plain HTTP clients, so the tables were fetched from inside a 
 ## Credits
 
 Photos by Rudra Gupta, Urip Dunker and rupixen on Unsplash. Type is Fraunces and Inter. Charts are D3.
+
+## Share assets
+
+`python3 share-assets.py` regenerates the 1200×630 card from the checked-in NPCI CSVs, using the page's Fraunces/Inter fonts, and the favicon set from the UPI arrow mark. It uses puppeteer-core (`PUPPETEER_MODULE` can point to an installed copy), Chromium (`CHROMIUM_PATH` overrides the path), and Pillow.
+
+`python3 build.py` targets GitHub Pages. For ownnow, build with `python3 build.py --site-url https://now.harssha.design/<slug>/`, then publish only `index.html` and `assets/` to that slug. Use a separate noindex test slug for review.
